@@ -1,9 +1,8 @@
 ---
 title: "Lorem ipsum dolor sit amet"
 author: John Doe
-avatar: https://i.pravatar.cc/40
-date: Mar 25, 2023
-image: https://picsum.photos/1200/520
+date: 2018-05-11
+cover: /content/blog/a-great-article/cover.jpg
 excerpt: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at mi suscipit sapien volutpat volutpat. Nam tempor malesuada ligula, et pretium ante ultricies sed.
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
