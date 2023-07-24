@@ -4,6 +4,10 @@ body {
   background-color: var(--background-colour-1);
 }
 
+img {
+  max-width: 100%;
+}
+
 footer {
   display: flex;
   justify-content: center;
