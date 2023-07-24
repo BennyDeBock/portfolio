@@ -13,5 +13,8 @@
     "@nuxt/devtools": "latest",
     "@types/node": "^18.16.19",
     "nuxt": "^3.6.3"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
   }
 }
