@@ -1,0 +1,20 @@
+:root {
+  /* Light mode variables*/
+  --bg-light-1: #fff
+
+  /* Dark mode variables */
+  --bg-dark-1: #121212
+}
+
+@media(prefers-color-scheme: dark) {
+  :root {
+    --background-colour-1: var(--bg-dark)
+  }
+  
+}
+
+@media(prefers-color-scheme: light) {
+  :root {
+    --background-colour-1: var(--bg-light)
+  }
+}

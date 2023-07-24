@@ -9,6 +9,7 @@
             <slot />
         </div>
     </div>
+    <FooterComponent></FooterComponent>
 </template>
 
 <style>

@@ -1,6 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  css: ['normalize.css', '~/assets/styles/main.css'],
+  components: [
+    { path: '~/components/common'},
+    '~/components'
+  ],
   typescript: {
     shim: false
   },
