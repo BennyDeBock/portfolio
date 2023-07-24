@@ -1,9 +1,11 @@
 ---
 title: "How to contribute to open source as a junior developer - My experience"
 author: De Bock Benny
-date: 2022-07-02
-cover: /content/blog/how-to-contribute-to-open-source/cover.jpg
-excerpt: Have you ever been in a position where you want to contribute to open source projects, but you don't know where to start? I sure have, but through my internship at [Broken Hands](https://www.brokenhands.io/), I was able to gain experience in open source, more specifically in the [Vapor](https://github.com/vapor/vapor) ecosystem. As such I want to share these experiences and tips with you.
+date: July 2nd, 2022
+tags: 
+  - open source
+  - junior
+excerpt: Have you ever been in a position where you want to contribute to open source projects, but you don't know where to start? Check out my experiences here!
 ---
 Hello there!
 
