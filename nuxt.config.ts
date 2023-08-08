@@ -1,7 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  css: ['normalize.css', '~/assets/styles/main.css'],
+  css: [
+    'normalize.css', 
+    'nes.css/css/nes.min.css',
+    '~/assets/styles/main.css'
+  ],
   components: [
     { path: '~/components/common'},
     '~/components'

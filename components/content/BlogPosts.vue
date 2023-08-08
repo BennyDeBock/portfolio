@@ -1,15 +1,11 @@
 <template>
-  <h1>Blog</h1>
-  <ul>
-    <li v-for="{ _path: slug, title, date, tags, excerpt } in blogPosts" :key="slug">
-      <NuxtLink :to="slug">
-        <h2>{{ title }}</h2>
-        <h3>{{ date }}</h3>
-        <p>{{ excerpt }}</p>
-        <h4 v-for="tag in tags" :key="tag">{{ tag }}</h4>
-      </NuxtLink>
-    </li>
-  </ul>
+  <BlogLink
+    v-for="{ _path: slug, title, date, tags, excerpt } in blogPosts" :key="slug"
+    :path="slug!"
+    :title="title!"
+    :date="date"
+    :excerpt="excerpt"
+    :tags="tags" />
 </template>
 
 <script setup lang="ts">
