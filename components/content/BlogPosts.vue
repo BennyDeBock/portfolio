@@ -1,14 +1,11 @@
 <template>
-  <ul>
-    <li v-for="{ _path: slug, title, date, tags, excerpt } in blogPosts" :key="slug">
-      <BlogLink
-        :path="slug"
-        :title="title"
-        :date="date"
-        :excerpt="excerpt"
-        :tags="tags" />
-    </li>
-  </ul>
+  <BlogLink
+    v-for="{ _path: slug, title, date, tags, excerpt } in blogPosts" :key="slug"
+    :path="slug!"
+    :title="title!"
+    :date="date"
+    :excerpt="excerpt"
+    :tags="tags" />
 </template>
 
 <script setup lang="ts">

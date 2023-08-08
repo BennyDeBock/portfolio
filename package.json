@@ -15,6 +15,7 @@
     "nuxt": "^3.6.3"
   },
   "dependencies": {
+    "nes.css": "^2.3.0",
     "normalize.css": "^8.0.1"
   }
 }
