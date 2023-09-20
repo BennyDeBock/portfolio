@@ -5,7 +5,7 @@
             <NuxtLink class="link" to="/blog">Blog</NuxtLink>
             <NuxtLink class="link" to="/release-notes">Release notes</NuxtLink>
         </nav>
-        <div>
+        <div class="container">
             <slot />
         </div>
     </div>
