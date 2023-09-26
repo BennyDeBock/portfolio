@@ -45,7 +45,51 @@ let isActive = ref(false)
   transform: translate3d(0, -100%, 0);
 }
 
+
+
+@media screen and (max-width: 1023px) {
+  .navbar-burger {
+    color: var(--text-colour);
+    height: unset;
+  }
+
+  .navbar-menu {
+    background-color: var(--primary-colour);
+  }
+
+  .navbar-burger span:nth-child(1) {
+    top: calc(50% - 8px);
+  }
+
+  .navbar-burger.is-active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .navbar-burger.is-active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .navbar-burger span:nth-child(2) {
+    top: calc(50% - 1px);
+  }
+  .navbar-burger span:nth-child(3) {
+    top: calc(50% + 6px);
+  }
+  .navbar-burger span {
+    height: 2px;
+    width: 30px;
+    left: calc(50% - 20px);
+  }
+}
+
 .navbar-item {
+  color: var(--text-colour);
+}
+
+.navbar-item:hover, 
+.navbar-item:focus,
+.navbar-item:focus-within {
+  background-color: var(--secondary-colour);
   color: var(--text-colour);
 }
 </style>
