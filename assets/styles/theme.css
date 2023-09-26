@@ -1,20 +1,49 @@
 :root {
   /* Light mode variables*/
-  --bg-light-1: #fff
+  --bg-light-1: #fbfbfe;
+
+  --primary-light: #6f21ac;
+  --secondary-light: #6a346a;
+  --accent-light: #f7e849;
+
+  --text-light: #050315;
+  --text-light-contrast: #fff;
+
 
   /* Dark mode variables */
-  --bg-dark-1: #121212
+  --bg-dark-1: #121212;
+
+  --primary-dark: #6d3996;
+  --secondary-dark: #cb95cb;
+  --accent-dark: #025a02;
+
+  --text-dark: #fff;
+  --text-dark-contrast: #050315;
 }
 
 @media(prefers-color-scheme: dark) {
   :root {
-    --background-colour-1: var(--bg-dark)
+    --background-colour-1: var(--bg-dark-1);
+
+    --primary-colour: var(--primary-dark);
+    --secondary-colour: var(--secondary-dark);
+    --accent-colour: var(--accent-dark);
+
+    --text-colour: var(--text-dark);
+    --text-contrast: var(--text-dark-contrast);
   }
   
 }
 
 @media(prefers-color-scheme: light) {
   :root {
-    --background-colour-1: var(--bg-light)
+    --background-colour-1: var(--bg-light-1);
+
+    --primary-colour: var(--primary-light);
+    --secondary-colour: var(--secondary-light);
+    --accent-colour: var(--accent-light);
+
+    --text-colour: var(--text-light);
+    --text-contrast: var(--text-light-contrast);
   }
 }

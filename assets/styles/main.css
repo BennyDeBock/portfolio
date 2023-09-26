@@ -3,6 +3,7 @@
 
 body {
   background-color: var(--background-colour-1);
+  color: var(--text-colour);
   font-family: 'Proza Libre';
   font-size: 16px;
 }
