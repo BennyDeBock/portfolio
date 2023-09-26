@@ -1,5 +1,5 @@
 <template>
-    <article class="card">
+    <article class="card column">
         <header class="card-header">
             <NuxtLink :to="props.path">
                 <h2 class="card-header-title">{{ props.title }}</h2>
