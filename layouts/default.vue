@@ -5,5 +5,7 @@
   <main class="container">
     <slot />
   </main>
-  <FooterComponent></FooterComponent>
+  <footer>
+    <FooterComponent></FooterComponent>
+  </footer>
 </template>
