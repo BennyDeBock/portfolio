@@ -1,18 +1,26 @@
 <template>
-    <article class="nes-container is-rounded article">
-        <header>
-            <NuxtLink :to="props.path">
-                <h2>{{ props.title }}</h2>
-                <h3>{{ props.date }}</h3>
+    <div class="column">
+        <article class="card">
+        <header class="card-header">
+            <NuxtLink :to="props.path" class="card-header-title">
+                <h2 class="title is-5">
+                    {{ props.title }} | <span class="subtitle is-6">{{ props.date }}</span>
+                </h2>
             </NuxtLink>
         </header>
-        <p>{{ excerpt }}</p>
-        <footer v-if="tags">
-            <a href="#" v-for="tag in props.tags" :key="tag" class="nes-badge">
-                <span class="is-dark">{{ tag }}</span>
-            </a>
+        <div class="card-content">
+          <p class="content">{{ excerpt }}</p>
+        </div>
+        <footer v-if="tags" class="card-footer">
+            <div class="tags my-2">
+                <a href="#" v-for="tag in props.tags" :key="tag" class="tag is-rounded">
+                    <span>{{ tag }}</span>
+                </a>
+            </div>
         </footer>
     </article>
+    </div>
+    
 </template>
 
 <script setup lang="ts">
@@ -28,37 +36,24 @@ const props = defineProps<BlogLinkProps>()
 </script>
 
 <style scoped>
-/* ===== Article component ===== */
-.nes-container.article {
-  max-width: 90%;
-  margin: 0 0 5px 5%;
+.card {
+    background-color: var(--background-colour-2);
+    color: var(--text-colour);
 }
 
-.nes-container.article h2 {
-  font-size: 1.0rem;
+.card-header {
+    background-color: var(--primary-colour);
 }
 
-.nes-container.article h3 {
-  font-size: 0.9rem;
+.title {
+    color: var(--text-colour);
 }
 
-.nes-container.article p {
-  font-size: 0.8rem;
+.subtitle {
+    color: var(--text-colour-2);
 }
 
-.nes-container.article footer {
-  display: flex;
-  justify-content: left;
-  flex-wrap: wrap;
-}
-
-.nes-container.article .nes-badge {
-  width: unset;
-  margin: .5em .7em;
-}
-
-.nes-container.article footer a span.is-dark:first-child {
-  position: relative;
-  width: fit-content;
+.card-footer {
+    border-top-color: var(--primary-colour);
 }
 </style>

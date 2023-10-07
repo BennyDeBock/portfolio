@@ -2,8 +2,8 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: [
-    'normalize.css', 
-    'nes.css/css/nes.min.css',
+    'normalize.css',
+    'bulma/css/bulma.css',
     '~/assets/styles/main.css'
   ],
   components: [

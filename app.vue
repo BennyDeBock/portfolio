@@ -1,7 +1,7 @@
 <template>
-  <main id="main">
+  <div id="entry" style="min-height: 100dvh;">
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
-  </main>
+  </div>
 </template>
