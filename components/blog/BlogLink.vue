@@ -1,5 +1,5 @@
 <template>
-    <div class="column">
+    <div class="column is-half">
         <article class="card">
         <header class="card-header">
             <NuxtLink :to="props.path" class="card-header-title">
@@ -55,5 +55,10 @@ const props = defineProps<BlogLinkProps>()
 
 .card-footer {
     border-top-color: var(--primary-colour);
+}
+
+.tag {
+    background-color: var(--accent-colour);
+    color: var(--text-colour);
 }
 </style>
