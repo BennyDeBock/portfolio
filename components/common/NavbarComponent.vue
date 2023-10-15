@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <NuxtLink class="navbar-item is-size-2" to="/">
+      <NuxtLink class="navbar-item is-size-2 nav-title" to="/">
         Benny
       </NuxtLink>
 
@@ -35,8 +35,12 @@ let isActive = ref(false)
 </script>
 
 <style scoped>
+.nav-title {
+  font-family: 'Aurebesh', sans-serif;
+}
+
 .navbar {
-  font-family: 'Ubuntu';
+  font-family: 'Ubuntu', sans-serif;
   background-color: var(--primary-colour);
   transition: transform 200ms ease-out;
 }
