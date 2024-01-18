@@ -12,7 +12,7 @@ Hello there!
 
 As part of my current job, I've had to work out/adopt a versioning system. "Why?" you may inquire. A fantastic question, and to answer it, I'll provide a brief introduction to versioning and its benefits.
 
-We've probably all come in contact with versioning at some point. Be it libraries and frameworks you've used, products you've bought or even the games you've played. Every time something get's updated, a new version is created. However, the key question is:
+We've probably all come in contact with versioning at some point. Be it libraries and frameworks you've used, products you've bought or even the games you've played. Every time something gets updated, a new version is created. However, the key question is:
 
 ## What is versioning?
 
@@ -20,7 +20,7 @@ If we take a look at Techopedia, Software Versioning is the process of numbering
 
 ## How can we recognise when versioning is used?
 
-When software is coupled with versioning practices, they are usually combined with a version number. This number usually consists of numerical and/or alphpanumeric components that convey information about the program's evolution as well as its compatibility with previous or future releases of the software.
+When software is coupled with versioning practices, they are usually combined with a version number. This number usually consists of numerical and/or alphanumeric components that convey information about the program's evolution as well as its compatibility with previous or future releases of the software.
 
 Some of the most common versioning schemes are listed below:
 1. Sematic Versioning (SemVer): The most popular method of versioning you'll find online. SemVer uses the `major.minor.patch` syntax, with `major` referring to software-breaking changes, `minor` referring to backward-compatible additions, and `patch` referring to backward-compatible bug fixes.
