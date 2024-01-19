@@ -6,7 +6,7 @@ tags:
   - junior
   - versioning
 excerpt: 
-Have you ever been in a position where you want to contribute to open source projects, but you don't know where to start? Check out my experiences here!
+What is versioning? What are the different types of versioning systems? And why do we use them? Find out in this brief introduction how implementing software versioning can improve documentation, communication and release strategies!
 ---
 Hello there!
 
