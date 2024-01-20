@@ -1,7 +1,7 @@
 ---
 title: "Software Versioning: A brief introduction"
 author: De Bock Benny
-date: '2024-01-18'
+date: 2024-01-18
 tags: 
   - junior
   - versioning

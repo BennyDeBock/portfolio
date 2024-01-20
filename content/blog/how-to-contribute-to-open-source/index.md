@@ -1,7 +1,7 @@
 ---
 title: "How to contribute to open source as a junior developer - My experience"
 author: De Bock Benny
-date: '2022-07-02'
+date: 2022-07-02
 tags: 
   - open source
   - junior
