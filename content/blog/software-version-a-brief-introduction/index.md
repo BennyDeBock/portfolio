@@ -1,12 +1,11 @@
 ---
 title: "Software Versioning: A brief introduction"
 author: De Bock Benny
-date: January 18th, 2024
+date: '2024-01-18'
 tags: 
   - junior
   - versioning
-excerpt: 
-What is versioning? What are the different types of versioning systems? And why do we use them? Find out in this brief introduction how implementing software versioning can improve documentation, communication and release strategies!
+excerpt: What is versioning? What are the different types of versioning systems? And why do we use them? Find out in this brief introduction how implementing software versioning can improve documentation, communication and release strategies!
 ---
 Hello there!
 
@@ -27,7 +26,7 @@ Some of the most common versioning schemes include:
 
 2. Date-based Versioning: Another typical method of versioning where the version number is based on the release date. Typically seen in the format of `YYYY.MM.DD` or `YYYY-MM-DD`. It provides a clear chronological order of releases, but it does not specify the extent or nature of the modifications.
 
-3. Build Number: Where previously mentioned schemes used a sequence of numbers, some software employs a build number. This is a unique identification assigned to each build of the software. Build numbers can be sequential or include information such as timestamps or revision numbers, although this is not a requirement.
+3. Build Number: Where previously mentioned schemes used a sequence of numbers, some software employ a build number. This is a unique identification assigned to each build of the software. Build numbers can be sequential or include information such as timestamps or revision numbers, although this is not a requirement.
 
 ## Why should I use versioning?
 
