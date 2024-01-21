@@ -21,7 +21,7 @@ article {
 
   & p {
     line-height: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
 
     & :not(code)::before {
       content: '';
