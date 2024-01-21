@@ -53,6 +53,10 @@ const toReadableDate = (dateString: string) => {
 
 .card-header {
   background-color: var(--primary-colour);
+
+  & h2 {
+    margin: 0;
+  }
 }
 
 .title {
