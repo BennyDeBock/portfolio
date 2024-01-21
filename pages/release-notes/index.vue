@@ -8,3 +8,9 @@
     <p>0.0.2 - Add simple layout with navigation</p>
     <p>0.0.1 - First page has been added</p>
 </template>
+
+<script setup lang="ts">
+useHead({
+    title: 'Release notes'
+})
+</script>

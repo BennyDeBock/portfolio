@@ -43,6 +43,10 @@ const toReadableDate = (dateString: string) => {
   const month = date.toLocaleDateString('default', { month: 'long' })
   return `${month} ${dayWithSuffix}, ${date.getFullYear()}`
 }
+
+useHead({
+  title: 'Blog'
+})
 </script>
 
 <style scoped>
