@@ -1,5 +1,5 @@
 article {
-  h1, h2, h3, h4, h5, h6 {
+  & h1, & h2, & h3, & h4, & h5, & h6 {
     & a {
       font-size: inherit;
       font-weight: inherit;
@@ -61,7 +61,7 @@ article {
   }
 
   /* ===== Lists ===== */
-  ol {
+  & ol {
     & li {
       margin-left: 1.5rem;
       margin-bottom: 0.5rem;
@@ -73,7 +73,7 @@ article {
     }
   }
 
-  ul {
+  & ul {
     & li {
       margin-bottom: 0.5rem;
       color: var(--text-colour-2);
@@ -117,8 +117,8 @@ article {
   }
 
   /* ===== Code blocks inline ===== */
-  p > code,
-  li > code {
+  & p > code,
+  & li > code {
     background-color: var(--background-colour-2);
     color: var(--text-colour-2);
     border-radius: 3px;
@@ -130,4 +130,21 @@ article {
     box-decoration-break: clone;
     padding: .1rem .3rem .2rem;
   }
+
+  & blockquote {
+    font-style: italic;
+    border-left: .3rem solid var(--accent-colour);
+    border-radius: 0.2rem;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    -ms-border-radius: 0.2rem;
+    -o-border-radius: 0.2rem;
+    background-color: var(--background-colour-2);
+    padding: .5rem;
+
+
+    > p {
+      margin-bottom: 0;
+    }
+}
 }
