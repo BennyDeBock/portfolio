@@ -1,0 +1,150 @@
+article {
+  & h1, & h2, & h3, & h4, & h5, & h6 {
+    & a {
+      font-size: inherit;
+      font-weight: inherit;
+      color: inherit;
+
+      
+    }
+  
+    & :hover {
+      color: var(--text-colour);
+    }
+
+    & :hover::before {
+      content: "#";
+      position: absolute;
+      left: 1rem;
+    }
+  }
+
+  & p {
+    line-height: 1.5rem;
+    margin-bottom: 0.8rem;
+
+    & :not(code)::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      border-radius: 3px;
+      background-color: var(--accent-colour);
+      bottom: 0;
+      left: 0;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform .3s ease-in-out;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+    }
+
+    & :not(code):hover::before {
+      transform-origin: left;
+      transform: scaleX(1);
+    }
+
+    & :not(code)::after {
+      content: "\279A";
+    }
+
+    & :not(code):hover {
+      color: var(--text-colour);
+    }
+
+    & a {
+      color: var(--text-colour-2);
+      position: relative;
+    }
+  }
+
+  /* ===== Lists ===== */
+  & ol {
+    & li {
+      margin-left: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    & li::marker {
+      font-size: 0.9rem;
+      color: var(--text-colour-2);
+    }
+  }
+
+  & ul {
+    & li {
+      margin-bottom: 0.5rem;
+      color: var(--text-colour-2);
+
+      & ::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        border-radius: 3px;
+        background-color: var(--accent-colour);
+        bottom: 0;
+        left: 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform .3s ease-in-out;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+      }
+
+      & :hover::before {
+        transform-origin: left;
+        transform: scaleX(1);
+      }
+
+      & ::after {
+        content: "\279A";
+      }
+
+      & :hover {
+        color: var(--text-colour);
+      }
+
+      & a {
+        color: inherit;
+        position: relative;
+      }
+    }
+  }
+
+  /* ===== Code blocks inline ===== */
+  & p > code,
+  & li > code {
+    background-color: var(--background-colour-2);
+    color: var(--text-colour-2);
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    word-wrap: break-word;
+    box-decoration-break: clone;
+    padding: .1rem .3rem .2rem;
+  }
+
+  & blockquote {
+    font-style: italic;
+    border-left: .3rem solid var(--accent-colour);
+    border-radius: 0.2rem;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    -ms-border-radius: 0.2rem;
+    -o-border-radius: 0.2rem;
+    background-color: var(--background-colour-2);
+    padding: .5rem;
+
+
+    > p {
+      margin-bottom: 0;
+    }
+}
+}
