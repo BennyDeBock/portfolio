@@ -68,7 +68,7 @@ By choosing this option, you have have to pick the repository that you forked, a
 
 To create a proper pull request, it is important to shortly describe in the title of the pull request what it tries to solve/add. You can go into more detail in the comment section of the pull request as to which files you have changed, the behavior you have adjusted, as well as which issue it relates to. The latter can be done by typing something similar to `Resolves #<number>` where the `<number>` is the ID of the issue you are referencing.
 
-An example:
+An example:  
 ![An example of a merged pr](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vz3579zzyo5lb3tvuhvd.png)
  
 > Note: It is also possible to create a draft pull request. This means that you can show others that you are working on the problem already, but you are not able to release it yet as working code. You can use this to get feedback beforehand from the main developers or the community.

@@ -22,8 +22,45 @@ article {
   & p {
     line-height: 1.5rem;
     margin-bottom: 0.5rem;
+
+    & :not(code)::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      border-radius: 3px;
+      background-color: var(--accent-colour);
+      bottom: 0;
+      left: 0;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform .3s ease-in-out;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+    }
+
+    & :not(code):hover::before {
+      transform-origin: left;
+      transform: scaleX(1);
+    }
+
+    & :not(code)::after {
+      content: "\279A";
+    }
+
+    & :not(code):hover {
+      color: var(--text-colour);
+    }
+
+    & a {
+      color: var(--text-colour-2);
+      position: relative;
+    }
   }
 
+  /* ===== Lists ===== */
   ol {
     & li {
       margin-left: 1.5rem;
@@ -66,7 +103,6 @@ article {
 
       & ::after {
         content: "\279A";
-        margin-left: 0.3rem;
       }
 
       & :hover {
@@ -80,6 +116,7 @@ article {
     }
   }
 
+  /* ===== Code blocks inline ===== */
   p > code,
   li > code {
     background-color: var(--background-colour-2);
@@ -92,5 +129,5 @@ article {
     word-wrap: break-word;
     box-decoration-break: clone;
     padding: .1rem .3rem .2rem;
-}
+  }
 }
