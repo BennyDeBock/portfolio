@@ -1,6 +1,7 @@
 @import './theme.css';
 @import './font.css';
 @import './headers.css';
+@import './article.css';
 
 body {
   background-color: var(--background-colour-1);
