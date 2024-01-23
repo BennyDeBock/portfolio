@@ -3,11 +3,10 @@
   <div id="article-links" class="columns">
     <div v-if="!surround[0]" class="column"></div>
     <template v-for="(other, index) in surround" :key="index">
-      <div class="link-div">
+      <div v-if="other" class="column link-div">
         <NuxtLink
-          v-if="other"
           :to="other._path + '/'"
-          class="column is-flex is-justify-content-center is-align-content-center"
+          class="is-flex is-justify-content-center is-align-content-center"
           :aria-label="other.title"
         >
           <IconsArrowUp v-if="index % 2 === 0" width="24" height="24" class="rotate-270" />
