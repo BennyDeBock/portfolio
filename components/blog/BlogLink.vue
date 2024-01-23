@@ -33,17 +33,6 @@ interface BlogLinkProps {
 
 const props = defineProps<BlogLinkProps>()
 
-const toReadableDate = (dateString: string) => {
-  const date = new Date(dateString)
-  const day = date.toLocaleDateString('default', { day: 'numeric'})
-  const dayWithSuffix = 
-    +day > 3 ? `${day}th` :  
-    +day > 2 ? `${day}rd` :
-    +day > 1 ? `${day}nd` : `${day}st` 
-  const month = date.toLocaleDateString('default', { month: 'long' })
-  return `${month} ${dayWithSuffix}, ${date.getFullYear()}`
-}
-
 useHead({
   title: 'Blog'
 })
@@ -65,10 +54,6 @@ useHead({
 
 .title {
   color: var(--text-colour);
-}
-
-.subtitle {
-  color: var(--text-colour-2);
 }
 
 .card-footer {
