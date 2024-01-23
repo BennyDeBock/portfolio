@@ -44,7 +44,7 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
 // Set the meta
 const baseUrl = 'https://bennydebock.dev'
 const canonicalPath = baseUrl + (path + '/').replace(/\/+$/, '/')
-const image = baseUrl + '/default.webp'
+const image = baseUrl + 'img/blog/default.webp'
 
 // JSON+LD
 const jsonScripts = [    
@@ -79,8 +79,8 @@ useHead({
     { hid: 'og:description', property: 'og:description', content: `Hello there! ${data.value?.article?.excerpt}` },        
     { hid: 'og:image', name: 'image', property: 'og:image', content: image },        { hid: 'og:type', property: 'og:type', content: 'Article' },        
     { hid: 'og:image:type', property: 'og:image:type', content: `image/webp` },        
-    { hid: 'og:image:width', property: 'og:image:width', content: 190 },        
-    { hid: 'og:image:height', property: 'og:image:height', content: 190 },        
+    { hid: 'og:image:width', property: 'og:image:width', content: 2048 },        
+    { hid: 'og:image:height', property: 'og:image:height', content: 1152 },        
     { hid: 'og:image:alt', property: 'og:image:alt', content: 'Fushimi Inari' },        
     // Twitter        
     { hid: 'twitter:card', name: 'twitter:card', content: 'Summary' },       
