@@ -44,7 +44,7 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
 // Set the meta
 const baseUrl = 'https://bennydebock.dev'
 const canonicalPath = baseUrl + (path + '/').replace(/\/+$/, '/')
-const image = baseUrl + 'img/blog/default.webp'
+const image = baseUrl + '/img/blog/default.webp'
 
 // JSON+LD
 const jsonScripts = [    
