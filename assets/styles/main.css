@@ -23,6 +23,11 @@ code {
   font-family: 'Ubuntu', monospace;
 }
 
+section {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
 .subtitle {
   color: var(--text-colour-2);
 }

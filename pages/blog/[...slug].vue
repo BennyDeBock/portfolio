@@ -38,11 +38,7 @@ a::before {
   margin-right: 0.2rem;
 }
 
-section, header {
-  padding: 0 3rem;
-}
-
 header {
-  padding-bottom: 3rem;
+  padding: 0 3rem 3rem 3rem;
 }
 </style>
