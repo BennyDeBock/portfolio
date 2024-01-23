@@ -73,7 +73,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 ### Blog Post
 - [x] Title and date
 - [x] Article
-- [ ] Table of contents
+- [x] Table of contents
 - [ ] Syntax highlighting code
 - [ ] Link to next article
 - [ ] Link to previous article
