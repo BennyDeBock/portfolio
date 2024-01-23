@@ -8,3 +8,9 @@
 <script setup lang="ts">
 const year = new Date().getFullYear()
 </script>
+
+<style>
+footer {
+  padding: .5rem;
+}
+</style>

@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     '~/assets/styles/main.css'
   ],
   components: [
-    { path: '~/components/common'},
+    { path: '~/components/common' },
     '~/components'
   ],
   typescript: {

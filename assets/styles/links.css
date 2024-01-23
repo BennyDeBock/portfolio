@@ -1,0 +1,9 @@
+a {
+  font-size: inherit;
+  font-weight: inherit;
+  color: var(--text-colour-2);
+}
+
+a:hover {
+  color: var(--text-colour);
+}

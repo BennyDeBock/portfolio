@@ -61,3 +61,21 @@ yarn preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+
+## Features Blog
+### Blog Post list
+- [x] Overview
+- [ ] Pagination
+- [ ] Search by tag
+- [ ] Find by clicking on tag
+
+### Blog Post
+- [x] Title and date
+- [x] Article
+- [x] Table of contents
+- [ ] Syntax highlighting code
+- [x] Link to next article
+- [x] Link to previous article
+- [x] Back button
+- [ ] SEO

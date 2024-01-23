@@ -5,3 +5,10 @@
     </NuxtLayout>
   </div>
 </template>
+
+<script setup lang="ts">
+useHead({
+  titleTemplate: '%s | De Bock Benny',
+  title: 'Home'
+})
+</script>

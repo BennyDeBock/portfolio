@@ -1,6 +1,7 @@
 @import './theme.css';
 @import './font.css';
 @import './headers.css';
+@import './links.css';
 @import './article.css';
 
 body {
@@ -21,6 +22,15 @@ footer {
 
 code {
   font-family: 'Ubuntu', monospace;
+}
+
+section {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.subtitle {
+  color: var(--text-colour-2);
 }
 
 
