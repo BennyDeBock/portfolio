@@ -70,12 +70,12 @@ useHead({
   title: data.value?.article.title,
   meta: [       
     { name: 'author', content: data.value?.article?.author },        
-    { name: 'description', content: 'Hello there!' + data.value?.article.excerpt },  
+    { name: 'description', content: 'Hello there! ' + data.value?.article.excerpt },  
     { property: 'article:published_time', content: data.value?.article?.date.split('T')[0] },     
     // OG        
     { hid: 'og:title', property: 'og:title', content: data.value?.article?.title },        
     { hid: 'og:url', property: 'og:url', content: canonicalPath },        
-    { hid: 'og:description', property: 'og:description', content: 'Hello there!' + data.value?.article.excerpt },        
+    { hid: 'og:description', property: 'og:description', content: 'Hello there! ' + data.value?.article.excerpt },        
     { hid: 'og:image', name: 'image', property: 'og:image', content: image },        { hid: 'og:type', property: 'og:type', content: 'Article' },        
     { hid: 'og:image:type', property: 'og:image:type', content: `image/webp` },        
     { hid: 'og:image:width', property: 'og:image:width', content: 2048 },        
@@ -85,7 +85,7 @@ useHead({
     { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },       
     { hid: 'twitter:title', name: 'twitter:title', content: data.value?.article?.title },        
     { hid: 'twitter:url', name: 'twitter:url', content: canonicalPath },        
-    { hid: 'twitter:description', name: 'twitter:description', content: 'Hello there!' + data.value?.article.excerpt },        
+    { hid: 'twitter:description', name: 'twitter:description', content: 'Hello there! ' + data.value?.article.excerpt },        
     { hid: 'twitter:image', name: 'twitter:image', content: image },        
     { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: 'Fushimi Inari' }    
   ],    
