@@ -27,8 +27,6 @@ defineProps({
 })
 
 const flattenLinks = (links: Link[]) => {
-  console.log(links);
-  
   let _links = links.map((link: Link) => {
     let _link = [link]
     if(link.children) {
