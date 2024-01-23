@@ -3,7 +3,7 @@
     <template v-slot="{ doc }">
       <header>
         <h1>{{ doc.title }}</h1>
-        <p class="subtitle is-6">{{ toReadableDate(doc.date) }}</p>
+        <p class="subtitle is-5">{{ toReadableDate(doc.date) }}</p>
       </header>
       <section>
         <!-- Blog content -->
@@ -40,5 +40,9 @@ a::before {
 
 section, header {
   padding: 0 3rem;
+}
+
+header {
+  padding-bottom: 3rem;
 }
 </style>

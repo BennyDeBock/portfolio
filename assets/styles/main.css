@@ -23,4 +23,8 @@ code {
   font-family: 'Ubuntu', monospace;
 }
 
+.subtitle {
+  color: var(--text-colour-2);
+}
+
 
