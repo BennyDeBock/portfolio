@@ -1,13 +1,18 @@
 <template>
   <ContentDoc :path="$route.params.slug ? `/blog/${$route.params.slug[0]}` : '/blog'" tag="article" class="section">
     <template v-slot="{ doc }">
+      <!-- Title -->
       <header>
         <h1>{{ doc.title }}</h1>
         <p class="subtitle is-5">{{ toReadableDate(doc.date) }}</p>
       </header>
-      <section>
+      <section class="">
+        <!-- Table of contents -->
+        <aside class="">
+          <BlogTableOfContents :links="doc.body?.toc?.links" />
+        </aside>
         <!-- Blog content -->
-        <article>
+        <article class="">
           <ContentRenderer :value="doc"></ContentRenderer>
         </article>
       </section>
