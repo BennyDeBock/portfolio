@@ -1,10 +1,10 @@
 <template>
-  <nav class="toc" aria-label="Table of contents">
+  <nav v-if="links.length" class="toc" aria-label="Table of contents">
     <header @click="toggleToc" aria-label="Expand the table of contents.">
       <span class="aside-title">Table of Contents</span>
       <IconsChevronDown :class="[isVisible ? '' : 'rotate-180']" width="24" height="24"></IconsChevronDown>
     </header>
-    <ul v-if="links" :class="[isVisible ? 'block' : 'hidden']">
+    <ul :class="[isVisible ? 'block' : 'hidden']">
       <li v-for="link of flattenLinks(links)" :class="`toc-link_${link.depth}`">
         <a :href="`#${link.id}`">{{ link.text }}</a>
       </li>
@@ -27,6 +27,8 @@ defineProps({
 })
 
 const flattenLinks = (links: Link[]) => {
+  console.log(links);
+  
   let _links = links.map((link: Link) => {
     let _link = [link]
     if(link.children) {

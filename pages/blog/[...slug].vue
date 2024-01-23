@@ -21,10 +21,31 @@
       <h2>Blog slug ({{ $route.params.slug }}) not found</h2>
     </template>
   </ContentDoc>
-  <section>
+  <section class="article-footer">
+    <BlogRelatedArticles v-if="data" :surround="data.surround"></BlogRelatedArticles>
     <NuxtLink class="button" to="/blog">Back</NuxtLink>
   </section>
 </template>
+
+<script setup lang="ts">
+const { path } = useRoute();
+const cleanPath = path.replace(/\/+$/, '');
+const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
+  let article = queryContent('/blog').where({ _path: cleanPath }).findOne();    
+  // get the surround information,    
+  // which is an array of documeents that come before and after the current document    
+  let surround = queryContent('/blog').sort({ date: -1 }).only(['_path', 'title', 'date']).findSurround(cleanPath, { before: 1, after: 1 });   
+
+  return {        
+    article: await article,        
+    surround: await surround    
+  }
+})
+
+// TODO: Set metadata
+console.log(data);
+
+</script>
 
 <style scoped>
 a {
@@ -45,5 +66,9 @@ a::before {
 
 header {
   padding: 0 3rem 3rem 3rem;
+}
+
+.article-footer {
+  padding: 2rem 3rem;
 }
 </style>
