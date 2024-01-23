@@ -32,8 +32,7 @@ const { path } = useRoute();
 const cleanPath = path.replace(/\/+$/, '');
 const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
   let article = queryContent('/blog').where({ _path: cleanPath }).findOne();    
-  // get the surround information,    
-  // which is an array of documeents that come before and after the current document    
+
   let surround = queryContent('/blog').sort({ date: -1 }).only(['_path', 'title', 'date']).findSurround(cleanPath, { before: 1, after: 1 });   
 
   return {        
@@ -42,8 +41,64 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
   }
 })
 
-// TODO: Set metadata
-console.log(data);
+// Set the meta
+const baseUrl = 'https://bennydebock.dev'
+const canonicalPath = baseUrl + (path + '/').replace(/\/+$/, '/')
+const image = baseUrl + (data.value?.article?.socialImage.src || '/default.webp')
+
+// JSON+LD
+const jsonScripts = [    
+  {        
+    type: 'application/ld+json',        
+    children: JSON.stringify({            
+      '@context': 'https://schema.org',            
+      '@type': 'BlogPosting',            
+      mainEntityOfPage: {                
+        '@type': 'WebPage',                
+        '@id': 'https://bennydebock.dev/'            
+      },            
+      url: canonicalPath,            
+      image: image,            
+      headline: data.value?.article?.headline,            
+      abstract: data.value?.article?.excerpt,            
+      datePublished: data.value?.article?.date,            
+      dateModified: data.value?.article?.dateUpdated || data.value?.article?.date,       
+    })    
+  }
+]
+
+useHead({
+  title: data.value?.article.title,
+  meta: [       
+    { name: 'author', content: data.value?.article?.author },        
+    { name: 'description', content: `Hello there! ${data.value?.article?.excerpt}` },  
+    { property: 'article:published_time', content: data.value?.article?.date.split('T')[0] },     
+    // OG        
+    { hid: 'og:title', property: 'og:title', content: data.value?.article?.title },        
+    { hid: 'og:url', property: 'og:url', content: canonicalPath },        
+    { hid: 'og:description', property: 'og:description', content: `Hello there! ${data.value?.article?.excerpt}` },        
+    { hid: 'og:image', name: 'image', property: 'og:image', content: image },        { hid: 'og:type', property: 'og:type', content: 'Article' },        
+    { hid: 'og:image:type', property: 'og:image:type', content: `image/${data.value?.article?.socialImage.mime || 'webp'}` },        
+    { hid: 'og:image:width', property: 'og:image:width', content: data.value?.article?.socialImage.width || 190 },        
+    { hid: 'og:image:height', property: 'og:image:height', content: data.value?.article?.socialImage.height || 190 },        
+    { hid: 'og:image:alt', property: 'og:image:alt', content: data.value?.article?.socialImage.alt || 'Fushimi Inari' },        
+    // Twitter        
+    { hid: 'twitter:card', name: 'twitter:card', content: 'Summary' },       
+    { hid: 'twitter:title', name: 'twitter:title', content: data.value?.article?.title },        
+    { hid: 'twitter:url', name: 'twitter:url', content: canonicalPath },        
+    { hid: 'twitter:description', name: 'twitter:description', content: `Hello there! ${data.value?.article?.excerpt}` },        
+    { hid: 'twitter:image', name: 'twitter:image', content: image },        
+    { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: data.value?.article?.socialImage.alt || 'Fushimi Inari' }    
+  ],    
+  link: [        
+    {            
+      hid: 'canonical',            
+      rel: 'canonical',            
+      href: canonicalPath        
+    }    
+  ],    
+  script: jsonScripts
+});
 
 </script>
 

@@ -75,6 +75,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 - [x] Article
 - [x] Table of contents
 - [ ] Syntax highlighting code
-- [ ] Link to next article
-- [ ] Link to previous article
+- [x] Link to next article
+- [x] Link to previous article
 - [x] Back button
+- [ ] SEO
