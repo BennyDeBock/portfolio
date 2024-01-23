@@ -82,7 +82,7 @@ header {
 li {
   color: var(--text-colour-2);
 
-  & ::before {
+  ::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -100,7 +100,7 @@ li {
     -o-border-radius: 3px;
   }
 
-  & :hover::before {
+  :hover::before {
     transform-origin: left;
     transform: scaleX(1);
   }
@@ -109,7 +109,7 @@ li {
     position: relative;
   }
 
-  & :hover {
+  :hover {
     color: var(--text-colour);
   }
 }

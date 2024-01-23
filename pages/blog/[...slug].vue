@@ -44,7 +44,7 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
 // Set the meta
 const baseUrl = 'https://bennydebock.dev'
 const canonicalPath = baseUrl + (path + '/').replace(/\/+$/, '/')
-const image = baseUrl + (data.value?.article?.socialImage.src || '/default.webp')
+const image = baseUrl + '/default.webp'
 
 // JSON+LD
 const jsonScripts = [    
@@ -59,8 +59,8 @@ const jsonScripts = [
       },            
       url: canonicalPath,            
       image: image,            
-      headline: data.value?.article?.headline,            
-      abstract: data.value?.article?.excerpt,            
+      headline: data.value?.article?.title,            
+      abstract: `Hello there! ${data.value?.article?.excerpt}`,            
       datePublished: data.value?.article?.date,            
       dateModified: data.value?.article?.dateUpdated || data.value?.article?.date,       
     })    
@@ -78,17 +78,17 @@ useHead({
     { hid: 'og:url', property: 'og:url', content: canonicalPath },        
     { hid: 'og:description', property: 'og:description', content: `Hello there! ${data.value?.article?.excerpt}` },        
     { hid: 'og:image', name: 'image', property: 'og:image', content: image },        { hid: 'og:type', property: 'og:type', content: 'Article' },        
-    { hid: 'og:image:type', property: 'og:image:type', content: `image/${data.value?.article?.socialImage.mime || 'webp'}` },        
-    { hid: 'og:image:width', property: 'og:image:width', content: data.value?.article?.socialImage.width || 190 },        
-    { hid: 'og:image:height', property: 'og:image:height', content: data.value?.article?.socialImage.height || 190 },        
-    { hid: 'og:image:alt', property: 'og:image:alt', content: data.value?.article?.socialImage.alt || 'Fushimi Inari' },        
+    { hid: 'og:image:type', property: 'og:image:type', content: `image/webp` },        
+    { hid: 'og:image:width', property: 'og:image:width', content: 190 },        
+    { hid: 'og:image:height', property: 'og:image:height', content: 190 },        
+    { hid: 'og:image:alt', property: 'og:image:alt', content: 'Fushimi Inari' },        
     // Twitter        
     { hid: 'twitter:card', name: 'twitter:card', content: 'Summary' },       
     { hid: 'twitter:title', name: 'twitter:title', content: data.value?.article?.title },        
     { hid: 'twitter:url', name: 'twitter:url', content: canonicalPath },        
     { hid: 'twitter:description', name: 'twitter:description', content: `Hello there! ${data.value?.article?.excerpt}` },        
     { hid: 'twitter:image', name: 'twitter:image', content: image },        
-    { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: data.value?.article?.socialImage.alt || 'Fushimi Inari' }    
+    { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: 'Fushimi Inari' }    
   ],    
   link: [        
     {            
