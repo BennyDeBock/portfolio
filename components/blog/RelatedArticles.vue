@@ -46,7 +46,7 @@ defineProps({
 div:has(> a) {
   color: var(--text-colour-2);
 
-  & ::before {
+  ::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -64,7 +64,7 @@ div:has(> a) {
     -o-border-radius: 3px;
   }
 
-  & :hover::before {
+  :hover::before {
     transform-origin: left;
     transform: scaleX(1);
   }
@@ -73,7 +73,7 @@ div:has(> a) {
     position: relative;
   }
 
-  & :hover {
+  :hover {
     color: var(--text-colour);
   }
 }
