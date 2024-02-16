@@ -64,6 +64,9 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 
 ## Features Blog
+### Common
+- [ ] Improve visual difference between external links and navigation links
+
 ### Blog Post list
 - [x] Overview
 - [ ] Pagination
@@ -78,4 +81,15 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 - [x] Link to next article
 - [x] Link to previous article
 - [x] Back button
-- [ ] SEO
+- [x] SEO
+
+### CV
+- [ ] Small Bio
+- [ ] Contact information
+- [ ] Studies
+- [ ] Work Experience
+- [ ] Soft Skills
+- [ ] Hard Skills
+- [ ] Languages
+- [ ] Hobbies
+- [ ] Export page to PDF
