@@ -1,10 +1,10 @@
-# Nuxt 3 Minimal Starter
+# Nuxt Minimal Starter
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## Setup
 
-Make sure to install the dependencies:
+Make sure to install dependencies:
 
 ```bash
 # npm
@@ -15,6 +15,9 @@ pnpm install
 
 # yarn
 yarn install
+
+# bun
+bun install
 ```
 
 ## Development Server
@@ -26,10 +29,13 @@ Start the development server on `http://localhost:3000`:
 npm run dev
 
 # pnpm
-pnpm run dev
+pnpm dev
 
 # yarn
 yarn dev
+
+# bun
+bun run dev
 ```
 
 ## Production
@@ -41,10 +47,13 @@ Build the application for production:
 npm run build
 
 # pnpm
-pnpm run build
+pnpm build
 
 # yarn
 yarn build
+
+# bun
+bun run build
 ```
 
 Locally preview production build:
@@ -54,42 +63,13 @@ Locally preview production build:
 npm run preview
 
 # pnpm
-pnpm run preview
+pnpm preview
 
 # yarn
 yarn preview
+
+# bun
+bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
-
-
-## Features Blog
-### Common
-- [ ] Improve visual difference between external links and navigation links
-
-### Blog Post list
-- [x] Overview
-- [ ] Pagination
-- [ ] Search by tag
-- [ ] Find by clicking on tag
-
-### Blog Post
-- [x] Title and date
-- [x] Article
-- [x] Table of contents
-- [ ] Syntax highlighting code
-- [x] Link to next article
-- [x] Link to previous article
-- [x] Back button
-- [x] SEO
-
-### CV
-- [ ] Small Bio
-- [ ] Contact information
-- [ ] Studies
-- [ ] Work Experience
-- [ ] Soft Skills
-- [ ] Hard Skills
-- [ ] Languages
-- [ ] Hobbies
-- [ ] Export page to PDF
